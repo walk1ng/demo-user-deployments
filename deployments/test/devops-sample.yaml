@@ -27,7 +27,7 @@ spec:
               value: js|html
             - name: CACHE_PUBLIC_EXPIRATION
               value: 3d
-          image: ghcr.io/lanbingcloud/devops-sample:0.0.1-798752568933e4a476b1092c7a964e12a6a79621
+          image: ghcr.io/lanbingcloud/devops-sample:0.0.1-c9c14b147b66ffa69e4d3b12d2bcac7e86bd4975
           readinessProbe:
             httpGet:
               path: /
