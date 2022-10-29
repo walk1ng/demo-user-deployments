@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -17,3 +18,20 @@ spec:
     tier: backend
   sessionAffinity: None
   type: NodePort
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ks-sample-dev
+spec:
+  rules:
+  - host: devops-sample.119-8-58-20.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: ks-sample-dev
+            port: 
+              number: 8080
